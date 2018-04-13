@@ -1,7 +1,7 @@
 # Specify the distribution
 ARG DISTRO=debian9
 
-# Start with the preqrequisite parent image for the selected distribution
+# Start with the prerequisite parent image for the selected distribution
 FROM scjalliance/edk2:prereqs-${DISTRO}
 
 # Specify which edk2 branch to use
