@@ -1,11 +1,11 @@
 # Specify the distribution
-ARG DISTRO=debian9
+ARG DISTRO=debian10
 
 # Start with the prerequisite parent image for the selected distribution
 FROM scjalliance/edk2:prereqs-${DISTRO}
 
 # Specify which edk2 branch to use
-ARG BRANCH=UDK2018
+ARG BRANCH=edk2-stable202002
 
 # Specify some labels
 LABEL maintainer="Joshua Sjoding <joshua.sjoding@scjalliance.com>" \
