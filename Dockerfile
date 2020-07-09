@@ -1,7 +1,7 @@
 # Reference: https://github.com/tianocore/tianocore.github.io/wiki/Using-EDK-II-with-Native-GCC
 #            https://github.com/tianocore/tianocore.github.io/wiki/Common-instructions
 
-ARG DEBIAN_VERSION=9
+ARG DEBIAN_VERSION=10
 
 FROM debian:$DEBIAN_VERSION-slim
 
