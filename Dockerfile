@@ -5,11 +5,11 @@ ARG DISTRO=debian10
 FROM scjalliance/edk2:prereqs-${DISTRO}
 
 # Specify which edk2 tag to use
-ARG TAG=edk2-stable202002
+ARG TAG=stable202002
 
 # Specify some labels
 LABEL maintainer="Joshua Sjoding <joshua.sjoding@scjalliance.com>" \
-      description="Build environment for the TianoCore EDK II project running on ${DISTRO}. Follows the ${TAG} tag." \
+      description="Build environment for the TianoCore EDK II project running on ${DISTRO}. Based on the edk2-${TAG} tag." \
       distro="${DISTRO}" \
       edk2.tag="${TAG}"
 
@@ -20,7 +20,7 @@ ENV EDK_TOOLS_PATH=/opt/src/edk2/BaseTools
 WORKDIR /opt/src
 
 # Perform a clone and the then build the tools (we exclude the git history which saves a few hundred megabytes of space)
-RUN git clone --branch ${TAG} --single-branch --depth 1 https://github.com/tianocore/edk2 && make -C edk2/BaseTools
+RUN git clone --branch edk2-${TAG} --single-branch --depth 1 https://github.com/tianocore/edk2 && make -C edk2/BaseTools
 
 # Configure the build
 WORKDIR /opt/src/edk2/Conf
