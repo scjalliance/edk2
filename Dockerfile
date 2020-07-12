@@ -20,7 +20,7 @@ ENV EDK_TOOLS_PATH=/opt/src/edk2/BaseTools
 WORKDIR /opt/src
 
 # Perform a clone and the then build the tools (we exclude the git history which saves a few hundred megabytes of space)
-RUN git clone --branch ${BRANCH} --single-branch --depth 1 https://github.com/tianocore/edk2 && make -C edk2/BaseTools
+RUN git clone --branch ${BRANCH} --single-branch --depth 1 https://github.com/tianocore/edk2 && cd edk2 && git submodule update --init --recursive && make -C BaseTools
 
 # Configure the build
 WORKDIR /opt/src/edk2/Conf
