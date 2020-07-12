@@ -29,7 +29,7 @@ RUN touch target.txt && \
     echo "MAX_CONCURRENT_THREAD_NUMBER = 0" >> target.txt && \
     echo "BUILD_RULE_CONF              = Conf/build_rule.txt" >> target.txt && \
     echo "TOOL_CHAIN_CONF              = Conf/tools_def.txt" >> target.txt && \
-    echo "TOOL_CHAIN_TAG               = GCC83" >> target.txt
+    echo "TOOL_CHAIN_TAG               = GCC5" >> target.txt
 
 # Run the setup script
 WORKDIR /opt/src/edk2
