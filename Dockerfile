@@ -5,7 +5,7 @@ ARG DISTRO=debian10
 FROM scjalliance/edk2:prereqs-${DISTRO}
 
 # Specify which edk2 tag to use
-ARG TAG=edk2-stable202005
+ARG TAG=edk2-stable202002
 
 # Specify some labels
 LABEL maintainer="Joshua Sjoding <joshua.sjoding@scjalliance.com>" \
@@ -29,7 +29,7 @@ RUN touch target.txt && \
     echo "MAX_CONCURRENT_THREAD_NUMBER = 0" >> target.txt && \
     echo "BUILD_RULE_CONF              = Conf/build_rule.txt" >> target.txt && \
     echo "TOOL_CHAIN_CONF              = Conf/tools_def.txt" >> target.txt && \
-    echo "TOOL_CHAIN_TAG               = GCC8" >> target.txt
+    echo "TOOL_CHAIN_TAG               = GCC83" >> target.txt
 
 # Run the setup script
 WORKDIR /opt/src/edk2
