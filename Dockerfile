@@ -15,6 +15,6 @@ RUN apt-get update -qq && \
              git \
              gcc \
              nasm \
-             python \
+             python3 \
              && \
     apt-get purge -y --auto-remove && rm -rf /var/lib/apt/lists/*
