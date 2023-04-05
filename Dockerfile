@@ -5,7 +5,7 @@ ARG DISTRO=debian11
 FROM scjalliance/edk2:prereqs-${DISTRO}
 
 # Specify which edk2 tag to use
-ARG TAG=stable202205
+ARG TAG=stable202302
 
 # Specify some labels
 LABEL maintainer="Joshua Sjoding <joshua.sjoding@scjalliance.com>" \
