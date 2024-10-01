@@ -1,11 +1,11 @@
 # Specify the distribution
-ARG DISTRO=debian11
+ARG DISTRO=debian12
 
 # Start with the prerequisite parent image for the selected distribution
 FROM scjalliance/edk2:prereqs-${DISTRO}
 
 # Specify which edk2 tag to use
-ARG TAG=stable202302
+ARG TAG=stable202408
 
 # Specify some labels
 LABEL maintainer="Joshua Sjoding <joshua.sjoding@scjalliance.com>" \
