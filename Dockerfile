@@ -8,7 +8,7 @@ FROM scjalliance/edk2:prereqs-${DISTRO}
 ARG DISTRO
 
 # Specify which edk2 tag to use
-ARG TAG=stable202408
+ARG TAG=stable202411
 
 # Specify some labels
 LABEL maintainer="Joshua Sjoding <joshua.sjoding@scjalliance.com>" \
