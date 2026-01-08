@@ -1,5 +1,5 @@
 # Specify the distribution
-ARG DISTRO=debian12
+ARG DISTRO=debian13
 
 # Start with the prerequisite parent image for the selected distribution
 FROM scjalliance/edk2:prereqs-${DISTRO}
@@ -8,7 +8,7 @@ FROM scjalliance/edk2:prereqs-${DISTRO}
 ARG DISTRO
 
 # Specify which edk2 tag to use
-ARG TAG=stable202505
+ARG TAG=stable202508
 
 # Specify some labels
 LABEL maintainer="Joshua Sjoding <joshua.sjoding@scjalliance.com>" \
@@ -22,7 +22,7 @@ ENV EDK_TOOLS_PATH=/opt/src/edk2/BaseTools
 # Prepare a source directory
 WORKDIR /opt/src
 
-# Perform a clone and the then build the tools (we exclude the git history which saves a few hundred megabytes of space)
+# Perform a clone and then build the base tools (we exclude the git history which saves a few hundred megabytes of space)
 RUN git clone --branch edk2-${TAG} --single-branch --depth 1 https://github.com/tianocore/edk2 && cd edk2 && git submodule update --init --recursive && make -C BaseTools
 
 # Configure the build
