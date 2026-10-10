@@ -25,6 +25,9 @@ WORKDIR /opt/src
 # Perform a shallow clone of the source and its submodules. Excluding the full git history saves a few hundred megabytes of space.
 RUN git clone --branch edk2-${TAG} --single-branch --depth 1 https://github.com/tianocore/edk2 && cd edk2 && git submodule update --init --recursive
 
+# Move into the cloned EDK II source.
+WORKDIR /opt/src/edk2
+
 # Build the base tools.
 RUN make -C BaseTools
 
