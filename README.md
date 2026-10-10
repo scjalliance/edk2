@@ -4,5 +4,6 @@ A docker-based build environment for the TianoCore EDK II project.
 
 # References
 
-* https://github.com/tianocore/tianocore.github.io/wiki/Using-EDK-II-with-Native-GCC
-* https://github.com/tianocore/tianocore.github.io/wiki/Common-instructions
+* https://www.tianocore.org/tianocore-wiki.github.io/development/tutorials-howto/getting_started_with_edk_ii.html
+* https://www.tianocore.org/tianocore-wiki.github.io/build-tooling/build-workflows/common_instructions_for_unix.html
+
